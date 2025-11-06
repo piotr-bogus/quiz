@@ -3,14 +3,10 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  /* position: absolute; */
   max-width: 512px;
-  /* top: calc(50% - 25.5px); */
-  /* left: 50%; */
   gap: 32px;
   padding: 32px;
   border-radius: 32px;
-  /* transform: translate(-50%, -50%); */
 }
 
 .description-card {

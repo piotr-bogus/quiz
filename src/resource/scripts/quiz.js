@@ -1,5 +1,3 @@
-// src/resource/scripts/quiz.js
-// Profesjonalny, wydajny, czysty JS (ES6+), z wstrzykniętymi stylami i domyślnym ukryciem .answer-card
 (() => {
   "use strict";
 
@@ -16,7 +14,6 @@
     return;
   }
 
-  // --- WSTRZYKUJEMY STYLE DLA .answer-card ---
   const styleTag = document.createElement("style");
   styleTag.textContent = `
     .answer-card {
@@ -41,7 +38,6 @@
   `;
   document.head.appendChild(styleTag);
 
-  // --- STAN QUIZU ---
   let questions = [];
   let order = [];
   let currentIdx = 0;
@@ -77,7 +73,6 @@
     setText(titleCard, q.question);
     inputEl.value = "";
 
-    // Ukryj answer-card do czasu nowej odpowiedzi
     answerCard.style.display = "none";
     answerCard.className = "answer-card";
     answerCard.textContent = "";
@@ -97,7 +92,6 @@
 
     if (isCorrect) correctCount++;
 
-    // Pokaż answer-card
     answerCard.className = `answer-card ${isCorrect ? "correct" : "incorrect"}`;
     answerCard.textContent = isCorrect ? "Poprawna odpowiedź" : `Poprawna odpowiedź: ${q.answer}`;
     answerCard.style.display = "block";

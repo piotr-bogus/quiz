@@ -1,6 +1,3 @@
-// src/resource/scripts/wynik.js
-// Dynamiczne wstawianie wyniku do wynik.html z animowanym kołowym wskaźnikiem postępu
-
 (() => {
   "use strict";
 
@@ -16,20 +13,17 @@
 
   const percent = Math.round((score / total) * 100);
 
-  // Zaktualizuj tekst opisu i procentu
   descriptionCard.textContent = `Odpowiedziałeś poprawnie na ${score} z ${total} pytań`;
   valueSpan.textContent = `${percent}%`;
 
-  // --- WSTRZYKNIĘCIE STYLI DLA OBWÓDKI ---
   const baseStyle = "";
 
   const styleTag = document.createElement("style");
   styleTag.textContent = baseStyle;
   document.head.appendChild(styleTag);
 
-  // --- ANIMACJA WYPEŁNIENIA PROGRESU ---
   let current = 0;
-  const duration = 1000; // 1 sekunda animacji
+  const duration = 1000;
   const start = performance.now();
 
   const animate = (timestamp) => {

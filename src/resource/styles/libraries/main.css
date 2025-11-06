@@ -1,0 +1,73 @@
+@import url(fonts.css);
+@import url(icons.css);
+@import url(reset.css);
+
+:root {
+  --background: #fff;
+  --background-1: #f5f5f7;
+  --background-2: #ebebef;
+  --background-3: #e1e1e7;
+  --background-4: #d7d7df;
+  --background-5: #cdcdd7;
+  --background-6: #c3c3cf;
+  --background-7: #b9b9c7;
+  --background-8: #afafbf;
+  --background-9: #a5a5b7;
+  --color-5: #91919b;
+  --color-4: #74747c;
+  --color-3: #57575d;
+  --color-2: #3a3a3e;
+  --color-1: #1d1d1f;
+  --color: #000;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "DM Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--background-1);
+  color: var(--color-1);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 64px;
+}
+
+.container-footer {
+  background-color: var(--background-2);
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  max-width: 1024px;
+  padding-block: 16px;
+}
+
+.description-footer {
+  font-size: 14px;
+}
+
+.lnk-description-footer:hover {
+  text-decoration: underline;
+}
+
+@media (width <= 480px) {
+  .container {
+    margin: 32px;
+  }
+
+  .footer {
+    align-items: center;
+    flex-direction: column;
+    gap: 8px;
+  }
+}

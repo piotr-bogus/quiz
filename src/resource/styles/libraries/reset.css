@@ -1,0 +1,16 @@
+a {
+  color: initial;
+  text-decoration: none;
+}
+
+i {
+  display: flex;
+}
+
+input[type="text"]::placeholder {
+  color: var(--color-5);
+}
+
+p {
+  line-height: 1.5em;
+}
